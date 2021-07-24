@@ -122,7 +122,7 @@
 <h3>😮😮😮😮 </h3>
 <div class="box">
 	<h2>PLAY WITH NAME</h2>
-	<input type="text" name="name" placeholder="Enter your name" id="text"><br>
+	<input type="text" name="name" placeholder="Enter your name" id="text" onchange="wow()"><br>
 	<button class="btn1" onclick="wow()">Enter</button>
 </div>
 <div class="game">
@@ -143,6 +143,9 @@
 	const ram = Math.floor(Math.random()*13)+1;
 	const ram1 = `wife${ram}.jpg`;
 	document.getElementById('change').setAttribute('src', ram1);
+	window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
+    loader.className += " hidden"; });
 	var n = document.getElementById('text').value;
 	document.querySelector('h3').innerHTML=n+" future wife looks like her👇🏻👇🏻👇🏻"
 	document.getElementById('text').style.borderColor="green";
