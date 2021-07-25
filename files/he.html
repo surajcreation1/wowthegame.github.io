@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>You look like</title>
+	<title>Bollywood</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
@@ -48,7 +48,7 @@
 			margin-top: 3rem;
 			font-size: 3rem;
 			font-family: Algerian;
-			color: #D9DB35;
+			color: #FFA500;
 			text-shadow: .2rem .3rem white;
 
 		}
@@ -98,7 +98,7 @@
 }
 
 .loader.hidden {
-    animation: fadeOut 4s;
+    animation: fadeOut 2.5s;
     animation-fill-mode: forwards;
 }
 
@@ -111,6 +111,7 @@
 
 
 	</style>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 	<div class="loader">
@@ -120,7 +121,7 @@
 <h3>😮😮😮😮 </h3>
 <div class="box">
 	<h2>PLAY WITH NAME</h2>
-	<input type="text" name="name" placeholder="Enter your name" id="text"><br>
+	<input type="text" name="name" placeholder="Enter your name" id="text" onchange="wow()"><br>
 	<button class="btn1" onclick="wow()">Enter</button>
 </div>
 <div class="game">
@@ -135,13 +136,17 @@
 	function wow(){
 		if (document.getElementById('text').value =="") {
 			document.getElementById('text').style.border="2px solid red";
-			alert("Please enter your name and try again!🙏🏻");
+			swal("Warning!", "please enter your  name and try again!🙏🏻", "warning");
 		}
 		else{
 	const ram = Math.floor(Math.random()*12)+1;
 	const ram1 = `he${ram}.jpg`;
 	document.getElementById('change').setAttribute('src', ram1);
-	document.querySelector('h3').innerHTML="You look like thhis bollywood actor👇🏻👇🏻👇🏻"
+	window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
+    loader.className += " hidden"; });
+	var n = document.getElementById('text').value;
+	document.querySelector('h3').innerHTML= n+" looks like him👇🏻👇🏻👇🏻"
 	document.getElementById('text').style.borderColor="green";
 	
 }}
