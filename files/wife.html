@@ -72,10 +72,12 @@
 
 
 		}
-		.btn1:hover{
-			border: .2rem solid yellow;
-			background-color:#FED42A;
-			transition: 0.5s;
+		.btn1{
+			width: 10rem;
+			height: 5rem;
+			border: .2rem solid #FED42A;
+			background-color: yellow;
+			border-radius: 50%;
 		}
 		.btn:hover{
 			border: .2rem solid yellow;
@@ -110,6 +112,9 @@
         visibility: hidden;
     }
 }
+.my-logo{
+			display: none;
+		}
 @media(max-width: 1024px){
 	.ram{
 		width: 40rem;
@@ -181,7 +186,7 @@
 	<div class="loader">
     <img src="load1.gif" alt="Loading..." />
 </div>
-<img src="hus.png" class="ram">
+<img src="wife.png" class="ram">
 <h3>😮😮😮😮 </h3>
 <div class="box">
 	<h2>PLAY WITH NAME</h2>
@@ -192,6 +197,10 @@
 	<img src="wife0.jpg" class="img" id="change" ><br>
 	<button class="btn" onclick="reset()">RESET</button>
 </div>	
+<div class="my-logo">
+	<img src="./suraj.png" alt="my-logo">
+	
+</div>
 <script>
 	window.addEventListener("load", function () {
     const loader = document.querySelector(".loader");

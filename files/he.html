@@ -64,9 +64,10 @@
 		}
 		.btn1{
 			width: 10rem;
-			height: 2rem;
+			height: 5rem;
 			border: .2rem solid #FED42A;
 			background-color: yellow;
+			border-radius: 50%;
 
 
 		}
@@ -101,6 +102,9 @@
     animation: fadeOut 2.5s;
     animation-fill-mode: forwards;
 }
+.my-logo{
+			display: none;
+		}
 
 @keyframes fadeOut {
     100% {
@@ -191,6 +195,10 @@
 	<img src="he0.jpg" class="img" id="change" ><br>
 	<button class="btn" onclick="reset()">RESET</button>
 </div>	
+<div class="my-logo">
+	<img src="./suraj.png" alt="my-logo">
+	
+</div>
 <script>
 	window.addEventListener("load", function () {
     const loader = document.querySelector(".loader");
