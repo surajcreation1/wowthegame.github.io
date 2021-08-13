@@ -62,9 +62,10 @@
 		}
 		.btn1{
 			width: 10rem;
-			height: 2rem;
+			height: 5rem;
 			border: .2rem solid #FED42A;
 			background-color: yellow;
+			border-radius: 50%;
 
 
 		}
@@ -77,6 +78,9 @@
 			border: .2rem solid yellow;
 			background-color:#FED42A;
 			transition: 0.5s;
+		}
+		.my-logo{
+			display: none;
 		}
 		.loader {
     position: fixed;
@@ -106,7 +110,73 @@
         visibility: hidden;
     }
 }
+@media(max-width: 1024px){
+	.box{
+		margin-left: 74rem;
 
+	}
+	.ram{
+		width: 30rem;
+		margin-top: 10rem;
+	}
+}
+@media(max-width: 768px){
+	.game img{
+            height: 35rem;
+            width: 30rem;
+	}
+	.btn{
+		height: auto;
+        width: 30rem;
+	}
+	.box{
+		margin-left: 56rem;
+	}
+	h3{
+		font-size: 2rem;
+		font-family: Copperplate Gothic Bold;
+		text-transform: uppercase;
+		text-shadow: .2rem .2rem white;
+
+	}
+}
+@media(max-width: 425px){
+	.game{
+		margin-left: 20rem;
+	}
+	.game img{
+		width: 35rem;
+		height: 50rem;
+	}
+	.btn{
+		width: 36rem;
+		height: 2rem;
+	}
+	h3{
+		margin-left: 16rem;
+		width: 100%;
+		font-size: 2.5rem;
+	}
+	.ram{
+		width: 25rem;
+		height: 80%;
+	}
+	.box{
+		margin-left: 57rem;
+	}
+	.box h2{
+		font-size: 2.5rem;
+		text-shadow:.3rem .3rem black;
+	}
+	.box input{
+		width: 15rem;
+	}
+	.my-logo{
+		display: block;
+		margin-left: 20rem;
+		opacity: 50%;
+	}
+}
 
 	</style>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -120,12 +190,16 @@
 <div class="box">
 	<h2>PLAY WITH NAME</h2>
 	<input type="text" name="name" placeholder="Enter your name" id="text" onchange="wow()"><br>
-	<button class="btn1" onclick="wow()">Enter</button>
+	<button class="btn1" onclick="wow()">(: PLAY :)</button>
 </div>
 <div class="game">
 	<img src="ram0.jpg" class="img" id="change" ><br>
 	<button class="btn" onclick="reset()">RESET</button>
 </div>	
+<div class="my-logo">
+	<img src="./suraj.png" alt="my-logo">
+	
+</div>
 <script>
 	window.addEventListener("load", function () {
     const loader = document.querySelector(".loader");
@@ -145,8 +219,6 @@
     loader.className += " hidden"; });
 	var n = document.getElementById('text').value;
 	document.querySelector('h3').innerHTML="This ramayana character resembles '"+n+"' real character👇🏻👇🏻👇🏻"
-	document.getElementById('text').style.borderColor="green";
-	
 }}
 function reset(){
 	location.reload();

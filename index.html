@@ -13,6 +13,7 @@
 	}
 	html{
 		font-size: 62.5%;
+		transition: 1s;
 	}
 		body{
 			background-color: powderblue;
@@ -28,7 +29,7 @@
 
 		}
 		.img{
-			margin-left:0.5% ;
+			margin-left:1.5rem ;
 			height: 18rem;
 			width: 18rem;
 		}
@@ -87,7 +88,142 @@
     }
 }
 
-	</style>
+@media (max-width: 1287px){
+	.img{
+			margin-left:40px;
+			height: auto;
+			width: 18rem;
+		}
+		.LOGO{	
+			margin: 0 auto;
+			position: relative;
+			padding-bottom: 100px;
+		}
+		.all-logo{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.mylogo{
+			height: 20rem;
+			width: 40rem;
+		}
+		.game{
+			margin: 1rem auto;
+		    height:55rem;
+		    width: 45rem;
+    justify-content: center;
+    align-items: center;
+     z-index: 99;
+
+		}
+
+}
+@media(max-width: 768px){
+	.img{
+			margin-left:40px;
+			height: auto;
+			width: 18rem;
+		}
+		.LOGO{	
+			margin: 0 auto;
+			position: sticky;
+			padding-bottom: 100px;
+		}
+	
+		.mylogo{
+			height: 20rem;
+			width: 30rem;
+	        margin: 0 0rem;
+	        opacity: 30%;
+
+		}
+		.all-logo{
+			justify-content: space-between;
+			align-items: center;
+		}
+		.game{
+			display: block;
+			align-items: center;
+			margin:1rem auto;
+		    height:55rem;
+		    width: 45rem;
+    justify-content: center;
+    align-items: center;
+     z-index: 99;
+
+		}
+}
+@media(max-width: 425px){
+	.img{
+			margin-left:30px;
+			height: auto;
+			width: 10rem;
+		}
+	.txt{
+			font-size: 5rem;
+		}
+	   .LOGO{
+	   	margin-left: 25rem;
+	   }
+		.mylogo{
+			height: 10rem;
+			width: 20rem;
+			opacity: 100%;
+		}
+	
+		.game{
+			display: block;
+			align-items: center;
+			margin:1rem auto;
+		    height:55rem;
+		    width: 45rem;
+    justify-content: center;
+    align-items: center;
+     z-index: 99;
+
+		}
+}
+@media(min-width: 2560px){
+   .img{
+			margin-left:40px;
+			height: auto;
+			width: 50rem;
+		}
+		.LOGO{	
+			margin: 0 auto;
+			position: sticky;
+			padding-bottom: 100px;
+		}
+	
+		.mylogo{
+			height: 70rem;
+			width: 80rem;
+	       margin-left: 180rem;
+			position: absolute;
+	        opacity: 100%;
+
+		}
+		.txt{
+			font-size: 18rem;
+		}
+
+		.game{
+			display: block;
+			align-items: center;
+			margin:1rem auto;
+		    height:105rem;
+		    width: 95rem;
+    justify-content: center;
+    align-items: center;
+     z-index: 99;
+
+		}
+}
+
+
+</style>
+
 </head>
 <body>
 	 <hr/>
@@ -95,11 +231,13 @@
 	  <div class="loader">
     <img src="files/load1.gif" alt="Loading..." />
 </div>
+<div class="all-logo">
 	<div class="LOGO">
-<img src="files/wow.png" alt="LOGO" class="img">
-<h1 class="txt">WOW</h1>
+        <img src="files/wow.png" alt="LOGO" class="img">
+        <h1 class="txt">WOW</h1>
     </div>
-    <img src="files/suraj.png" class="mylogo">
+   <img src="files/suraj.png" class="mylogo">
+</div>
 <center>
  <div class="game"> 
  	<a href="files/ram.html">
